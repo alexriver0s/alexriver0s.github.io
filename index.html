@@ -3,53 +3,270 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Riveros — Soporte Técnico IT</title>
-  <style>
-    :root {
-      --fondo: #0f172a;
-      --texto: #e2e8f0;
-      --acento: #38bdf8;
-      --suave: #94a3b8;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--fondo);
-      color: var(--texto);
-      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-      text-align: center;
-      padding: 24px;
-    }
-    .caja { max-width: 560px; }
-    .etiqueta {
-      display: inline-block;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--acento);
-      border: 1px solid var(--acento);
-      border-radius: 999px;
-      padding: 6px 14px;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: clamp(1.8rem, 5vw, 2.8rem);
-      line-height: 1.15;
-      margin-bottom: 16px;
-    }
-    p { color: var(--suave); line-height: 1.6; font-size: 1.05rem; }
-    .pie { margin-top: 40px; font-size: 0.85rem; color: #475569; }
-  </style>
+  <title>Alex Riveros | Soporte Técnico IT para empresas en Asunción</title>
+  <meta name="description" content="Soporte técnico IT para empresas sin área de sistemas. Diagnóstico, redes, Microsoft 365 y CCTV en Asunción y Gran Asunción. Técnico certificado Fortinet, Dahua y Hikvision.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main class="caja">
-    <span class="etiqueta">Sitio en construcción</span>
-    <h1>Alex Riveros<br>Soporte Técnico IT</h1>
-    <p>Estoy preparando este espacio para ofrecer servicios de soporte técnico e infraestructura a empresas. Muy pronto vas a poder agendar una consulta desde acá.</p>
-    <p class="pie">Asunción, Paraguay</p>
+
+  <!-- ============ ENCABEZADO ============ -->
+  <header class="cabecera" id="inicio">
+    <nav class="nav contenedor">
+      <a href="#inicio" class="logo">Alex Riveros<span>Soporte IT</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#como-trabajo">Cómo trabajo</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#agenda" class="nav-cta">Agendar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="contenedor hero-inner">
+        <p class="hero-kicker">Asunción y Gran Asunción</p>
+        <h1>Soporte técnico IT para empresas<br>que no tienen área de sistemas</h1>
+        <p class="hero-sub">
+          Diagnóstico, redes, Microsoft 365 y videovigilancia. Trabajo con agenda:
+          sabés exactamente cuándo voy y qué te entrego.
+        </p>
+        <div class="hero-acciones">
+          <a href="#agenda" class="btn btn-primario">Agendar una visita</a>
+          <a href="#servicios" class="btn btn-secundario">Ver servicios y precios</a>
+        </div>
+        <ul class="hero-sellos">
+          <li>Certificado Fortinet</li>
+          <li>Certificado Dahua</li>
+          <li>Certificado Hikvision</li>
+          <li>4 años en soporte corporativo</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="seccion" id="servicios">
+      <div class="contenedor">
+        <p class="seccion-kicker">Servicios</p>
+        <h2 class="seccion-titulo">Qué puedo resolverte</h2>
+        <p class="seccion-intro">
+          Precios de referencia, en guaraníes. El alcance exacto lo confirmamos antes de empezar:
+          nunca vas a recibir una factura con sorpresas.
+        </p>
+
+        <div class="grilla-servicios">
+
+          <article class="tarjeta tarjeta-destacada">
+            <span class="tarjeta-etiqueta">Empezá por acá</span>
+            <h3>Diagnóstico IT</h3>
+            <p class="precio">Gs. 200.000</p>
+            <p class="precio-detalle">Visita de hasta 2 horas · oficinas de hasta 10 equipos</p>
+            <p class="tarjeta-texto">
+              Voy a tu oficina, reviso el estado real de tu tecnología y te entrego un
+              <strong>informe escrito</strong>: qué tenés, qué está fallando, qué riesgos corrés
+              y qué conviene resolver primero.
+            </p>
+            <ul class="tarjeta-lista">
+              <li>Relevamiento de equipos, red y conectividad</li>
+              <li>Revisión de seguridad básica y respaldos</li>
+              <li>Informe con recomendaciones priorizadas</li>
+              <li>El informe es tuyo, lo uses conmigo o no</li>
+            </ul>
+            <a href="#agenda" class="btn btn-primario btn-bloque">Agendar diagnóstico</a>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Soporte remoto agendado</h3>
+            <p class="precio">Gs. 600.000</p>
+            <p class="precio-detalle">Bolsa de 5 horas · se consumen por sesión</p>
+            <p class="tarjeta-texto">
+              Comprás un paquete de horas y las usás cuando las necesites, en sesiones
+              reservadas por agenda. Ideal para tareas que no requieren que yo esté presente.
+            </p>
+            <ul class="tarjeta-lista">
+              <li>Altas, bajas y permisos de usuarios en Microsoft 365</li>
+              <li>Configuración de correo, Teams y SharePoint</li>
+              <li>Resolución de problemas de equipos y software</li>
+              <li>Reporte de las horas consumidas en cada sesión</li>
+            </ul>
+            <a href="#agenda" class="btn btn-secundario btn-bloque">Consultar disponibilidad</a>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Cámaras de seguridad</h3>
+            <p class="precio">Gs. 350.000</p>
+            <p class="precio-detalle">Por cámara instalada y configurada</p>
+            <p class="tarjeta-texto">
+              Instalación y configuración de sistemas Dahua y Hikvision, con acceso remoto
+              desde tu celular. También reparo y reconfiguro instalaciones existentes.
+            </p>
+            <ul class="tarjeta-lista">
+              <li>Instalación de cámaras y grabador (NVR/DVR)</li>
+              <li>Configuración de acceso remoto seguro</li>
+              <li>Ajuste de grabación, calidad y retención</li>
+              <li>Diagnóstico de sistemas que dejaron de funcionar</li>
+            </ul>
+            <a href="#agenda" class="btn btn-secundario btn-bloque">Pedir presupuesto</a>
+          </article>
+
+        </div>
+
+        <p class="nota-servicios">
+          ¿Necesitás algo que no está en la lista? Escribime por WhatsApp y te digo con
+          honestidad si puedo resolverlo o si te conviene otro profesional.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO TRABAJO ============ -->
+    <section class="seccion seccion-oscura" id="como-trabajo">
+      <div class="contenedor">
+        <p class="seccion-kicker">Cómo trabajo</p>
+        <h2 class="seccion-titulo">Sin sorpresas, sin promesas que no puedo cumplir</h2>
+
+        <ol class="pasos">
+          <li class="paso">
+            <span class="paso-numero">1</span>
+            <h3>Agendás</h3>
+            <p>Elegís día y hora desde el calendario, o me escribís por WhatsApp. Te confirmo por correo.</p>
+          </li>
+          <li class="paso">
+            <span class="paso-numero">2</span>
+            <h3>Diagnostico</h3>
+            <p>Voy a tu oficina y reviso todo. No toco nada crítico sin avisarte antes qué voy a hacer.</p>
+          </li>
+          <li class="paso">
+            <span class="paso-numero">3</span>
+            <h3>Te entrego un plan</h3>
+            <p>Recibís un informe escrito con lo que encontré y qué hacer, ordenado por prioridad y costo.</p>
+          </li>
+          <li class="paso">
+            <span class="paso-numero">4</span>
+            <h3>Decidís vos</h3>
+            <p>Si querés que lo ejecute, lo agendamos con fecha cerrada. Si no, el informe queda igual en tus manos.</p>
+          </li>
+        </ol>
+
+        <div class="disponibilidad">
+          <h3>Mi disponibilidad, dicha de frente</h3>
+          <p>
+            Trabajo en relación de dependencia de lunes a viernes, así que atiendo
+            <strong>sábados, domingos y feriados durante el día</strong>, y
+            <strong>noches de semana en sesiones remotas agendadas</strong>.
+          </p>
+          <p>
+            <strong>No ofrezco guardias ni urgencias en horario laboral.</strong> Prefiero decírtelo
+            ahora y no fallarte después. La ventaja: los trabajos que cortan la operación
+            —migraciones, cambios de red, instalaciones— los hago justo cuando tu empresa está cerrada.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE MÍ ============ -->
+    <section class="seccion" id="sobre-mi">
+      <div class="contenedor sobre-grid">
+        <div>
+          <p class="seccion-kicker">Sobre mí</p>
+          <h2 class="seccion-titulo">Quién va a estar del otro lado</h2>
+          <p class="sobre-texto">
+            Soy Alex Riveros, analista de soporte e infraestructura IT en Asunción. Hace más de
+            cuatro años que administro la tecnología de empresas: desde la mesa de ayuda diaria
+            hasta redes, servidores de video y entornos de Microsoft 365.
+          </p>
+          <p class="sobre-texto">
+            Estoy terminando Ingeniería Informática en la Universidad Gran Asunción, y me
+            certifiqué directamente con los fabricantes con los que trabajo. No improviso sobre
+            equipos de los que no sé: si algo se escapa de lo que manejo, te lo digo.
+          </p>
+        </div>
+        <div class="certificaciones">
+          <h3>Certificaciones</h3>
+          <div class="cert-grupo">
+            <p class="cert-marca">Fortinet</p>
+            <ul>
+              <li>NSE 3 Certified in Cybersecurity</li>
+              <li>FCA in Cybersecurity</li>
+              <li>FCA FortiGate 7.4 Operator</li>
+              <li>Networking Fundamentals</li>
+            </ul>
+          </div>
+          <div class="cert-grupo">
+            <p class="cert-marca">Dahua</p>
+            <ul>
+              <li>DHSA — Video Surveillance System</li>
+              <li>DHSP — Video Management System</li>
+            </ul>
+          </div>
+          <div class="cert-grupo">
+            <p class="cert-marca">Hikvision</p>
+            <ul>
+              <li>CCTV y Alarma — Configuración y Troubleshooting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AGENDA ============ -->
+    <section class="seccion seccion-oscura" id="agenda">
+      <div class="contenedor">
+        <p class="seccion-kicker">Agenda</p>
+        <h2 class="seccion-titulo">Reservá tu visita</h2>
+        <p class="seccion-intro">
+          Elegí el día y la hora que te sirva. Vas a recibir la confirmación por correo
+          con todos los datos.
+        </p>
+
+        <!-- Acá va a ir el calendario de Cal.com (Fase 4) -->
+        <div class="agenda-caja" id="calendario">
+          <p class="agenda-pendiente">
+            El calendario en línea se está configurando.<br>
+            Mientras tanto, escribime por WhatsApp y lo coordinamos al instante.
+          </p>
+          <a class="btn btn-whatsapp btn-grande"
+             href="https://wa.me/595976527771?text=Hola%20Alex%2C%20te%20escribo%20desde%20tu%20web.%20Quiero%20agendar%20un%20diagn%C3%B3stico%20IT%20para%20mi%20empresa."
+             target="_blank" rel="noopener">
+            Escribir por WhatsApp
+          </a>
+          <p class="agenda-alt">
+            ¿Preferís correo? <a href="mailto:alex.riveros004@gmail.com">alex.riveros004@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="pie">
+    <div class="contenedor pie-inner">
+      <div>
+        <p class="pie-nombre">Alex Riveros — Soporte Técnico IT</p>
+        <p class="pie-detalle">Asunción y Gran Asunción, Paraguay</p>
+      </div>
+      <div class="pie-contacto">
+        <a href="https://wa.me/595976527771" target="_blank" rel="noopener">WhatsApp: +595 976 527 771</a>
+        <a href="mailto:alex.riveros004@gmail.com">alex.riveros004@gmail.com</a>
+      </div>
+    </div>
+    <p class="pie-legal">© <span id="anio"></span> Alex Riveros. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- ============ BOTÓN FLOTANTE DE WHATSAPP ============ -->
+  <a class="wa-flotante"
+     href="https://wa.me/595976527771?text=Hola%20Alex%2C%20te%20escribo%20desde%20tu%20web."
+     target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884a9.82 9.82 0 0 1 6.988 2.896 9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.886-9.885 9.886m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.82 11.82 0 0 0 20.464 3.488"/>
+    </svg>
+  </a>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
