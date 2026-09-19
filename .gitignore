@@ -1,0 +1,29 @@
+# ============================================================
+# .gitignore — archivos que Git debe IGNORAR por completo.
+# Todo lo que se liste aca nunca se sube a GitHub.
+# ============================================================
+
+# --- SECRETOS: nunca, jamas, bajo ninguna circunstancia ---
+.env
+.env.*
+*.key
+*.pem
+*.pfx
+credenciales*
+secretos*
+config.local.*
+
+# --- Basura del sistema operativo ---
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# --- Archivos temporales de editores ---
+*.swp
+*~
+.vscode/
+.idea/
+
+# --- Notas privadas: si algun dia guardas datos de clientes aca ---
+/privado/
+*.borrador.md
