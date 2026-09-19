@@ -338,7 +338,6 @@ a { color: inherit; }
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 28px;
   list-style: none;
-  margin-bottom: 56px;
 }
 .paso { padding-top: 8px; }
 .paso-numero {
@@ -356,17 +355,40 @@ a { color: inherit; }
 .paso h3 { font-size: 1.12rem; margin-bottom: 8px; }
 .paso p { color: var(--texto-claro); font-size: 0.96rem; }
 
-.disponibilidad {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
+/* ============================================================
+   TARJETA ANCHA — comercios y particulares
+   ============================================================ */
+.tarjeta-ancha {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 28px;
+  padding: 36px;
+  background: var(--fondo);
+  border: 1px solid var(--borde);
   border-left: 4px solid var(--acento);
-  border-radius: var(--radio);
-  padding: 32px;
+  border-radius: 16px;
+  box-shadow: var(--sombra);
 }
-.disponibilidad h3 { font-size: 1.2rem; margin-bottom: 14px; }
-.disponibilidad p { color: var(--texto-claro); margin-bottom: 12px; max-width: 72ch; }
-.disponibilidad p:last-child { margin-bottom: 0; }
-.disponibilidad strong { color: #fff; }
+.tarjeta-ancha h3 {
+  font-size: 1.4rem;
+  color: var(--azul-profundo);
+  margin-bottom: 12px;
+}
+.tarjeta-ancha > div > p { color: var(--texto-suave); margin-bottom: 20px; }
+.tarjeta-lista-doble {
+  columns: 2;
+  column-gap: 32px;
+  margin-bottom: 0;
+}
+.tarjeta-ancha-lateral {
+  text-align: center;
+  padding: 28px 24px;
+  background: var(--fondo-alt);
+  border-radius: var(--radio);
+}
+.tarjeta-ancha-lateral .btn { margin-top: 20px; }
 
 /* ============================================================
    SOBRE MÍ
@@ -477,6 +499,8 @@ a { color: inherit; }
    ============================================================ */
 @media (max-width: 860px) {
   .sobre-grid { grid-template-columns: 1fr; gap: 36px; }
+  .tarjeta-ancha { grid-template-columns: 1fr; gap: 28px; padding: 28px; }
+  .tarjeta-lista-doble { columns: 1; }
 }
 
 @media (max-width: 760px) {
@@ -501,7 +525,6 @@ a { color: inherit; }
   .hero { padding: 64px 0 72px; }
   .hero-acciones .btn { width: 100%; }
   .seccion { padding: 64px 0; }
-  .disponibilidad { padding: 24px; }
   .agenda-caja { padding: 36px 22px; }
   .pie-inner { flex-direction: column; }
 }
