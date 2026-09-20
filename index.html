@@ -341,21 +341,26 @@
           con todos los datos.
         </p>
 
-        <!-- Acá va a ir el calendario de Cal.com (Fase 4) -->
-        <div class="agenda-caja" id="calendario">
-          <p class="agenda-pendiente" data-i18n="ag.pendiente">
-            Escribime por WhatsApp y te paso los horarios disponibles.<br>
-            Coordinamos día, hora y alcance del trabajo en el momento.
-          </p>
-          <a class="btn btn-whatsapp btn-grande"
-             href="https://wa.me/595976527771?text=Hola%20Alex%2C%20te%20escribo%20desde%20tu%20web.%20Quiero%20agendar%20un%20diagn%C3%B3stico%20IT%20para%20mi%20empresa."
-             target="_blank" rel="noopener" data-i18n="ag.wa">
-            Escribir por WhatsApp
-          </a>
-          <p class="agenda-alt" data-i18n-html="ag.alt">
-            ¿Preferís correo? <a href="mailto:alex.riveros004@gmail.com">alex.riveros004@gmail.com</a>
-          </p>
+        <!-- Selector del tipo de cita: cada botón cambia el calendario -->
+        <div class="agenda-tipos" role="group" data-i18n-aria="aria.tipos" aria-label="Tipo de cita">
+          <button class="agenda-tipo activo" data-cal="diagnostico-it" data-i18n="ag.tipo1">Diagnóstico IT · 2 h</button>
+          <button class="agenda-tipo" data-cal="visita-comercio-particular" data-i18n="ag.tipo2">Visita comercio o particular · 1,5 h</button>
+          <button class="agenda-tipo" data-cal="soporte-remoto" data-i18n="ag.tipo3">Soporte remoto · 1 h</button>
+          <button class="agenda-tipo" data-cal="llamada-de-consulta" data-i18n="ag.tipo4">Llamada de consulta · 20 min</button>
         </div>
+
+        <!-- El calendario vive dentro de un iframe: el navegador lo aísla
+             en su propio origen, así el código de Cal.com no puede leer
+             ni modificar esta página. -->
+        <div class="agenda-marco">
+          <iframe id="calFrame"
+                  src="https://cal.com/alexriveros/diagnostico-it?embed=true&amp;theme=dark&amp;layout=month_view"
+                  title="Calendario de reservas"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <p class="agenda-alt" data-i18n-html="ag.alt">¿Preferís coordinar por otro medio? <a href="https://wa.me/595976527771?text=Hola%20Alex%2C%20quiero%20agendar%20un%20servicio." target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:alex.riveros004@gmail.com">alex.riveros004@gmail.com</a></p>
       </div>
     </section>
 
