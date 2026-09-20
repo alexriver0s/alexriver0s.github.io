@@ -573,8 +573,27 @@ a { color: inherit; }
    RESPONSIVE — celulares y tablets
    ============================================================ */
 @media (max-width: 940px) {
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-visual { display: none; }
+  /* En celular el diagrama deja de ocupar lugar y pasa a ser FONDO.
+     position:absolute lo saca del flujo: ya no empuja nada hacia abajo
+     y el hero conserva su altura original. */
+  .hero { position: relative; overflow: hidden; }
+  .hero-inner { grid-template-columns: 1fr; gap: 0; }
+
+  /* El texto se eleva por encima del fondo con z-index */
+  .hero-texto { position: relative; z-index: 1; }
+
+  .hero-visual {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.15);
+    width: 100%;
+    z-index: 0;
+    opacity: 0.14;          /* apenas insinuado */
+    filter: blur(1.5px);    /* difuminado, para que no compita con el texto */
+    pointer-events: none;   /* no intercepta toques del usuario */
+  }
+  .hero-visual svg { max-width: 460px; }
 }
 
 @media (max-width: 860px) {
@@ -603,7 +622,9 @@ a { color: inherit; }
   .nav-cta { text-align: center; }
 
   .hero { padding: 64px 0 72px; }
+  .hero-acciones { margin-bottom: 0; }
   .hero-acciones .btn { width: 100%; }
+  .hero-visual svg { max-width: 260px; }
   .seccion { padding: 64px 0; }
   .agenda-caja { padding: 36px 22px; }
   .pie-inner { flex-direction: column; }
