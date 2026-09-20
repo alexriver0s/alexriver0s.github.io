@@ -6,7 +6,7 @@
   --azul-profundo: #0b1f33;
   --azul-medio:    #143352;
   --acento:        #0ea5e9;
-  --acento-oscuro: #0284c7;
+  --acento-oscuro: #0369a1;
   --whatsapp:      #25d366;
 
   --texto:         #1a2733;
@@ -69,8 +69,8 @@ a { color: inherit; }
 .btn:hover { transform: translateY(-2px); }
 .btn:focus-visible { outline: 3px solid var(--acento); outline-offset: 3px; }
 
-.btn-primario { background: var(--acento); color: #fff; box-shadow: var(--sombra); }
-.btn-primario:hover { background: var(--acento-oscuro); box-shadow: var(--sombra-alta); }
+.btn-primario { background: var(--acento); color: #04293f; box-shadow: var(--sombra); }
+.btn-primario:hover { background: #38bdf8; box-shadow: var(--sombra-alta); }
 
 .btn-secundario { background: transparent; color: var(--acento-oscuro); border-color: var(--acento); }
 .btn-secundario:hover { background: rgba(14, 165, 233, 0.08); }
@@ -137,10 +137,10 @@ a { color: inherit; }
 .nav-links a:hover { color: var(--azul-profundo); background: var(--fondo-alt); }
 .nav-cta {
   background: var(--acento) !important;
-  color: #fff !important;
+  color: #04293f !important;
   padding: 10px 20px !important;
 }
-.nav-cta:hover { background: var(--acento-oscuro) !important; }
+.nav-cta:hover { background: #38bdf8 !important; }
 
 .nav-toggle {
   display: none;
@@ -341,7 +341,7 @@ a { color: inherit; }
   position: absolute;
   top: -13px; left: 28px;
   background: var(--acento);
-  color: #fff;
+  color: #04293f;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -579,7 +579,7 @@ a { color: inherit; }
 .pie-legal {
   text-align: center;
   font-size: 0.83rem;
-  color: #64798e;
+  color: #8ba3b8;
   padding-top: 24px;
 }
 

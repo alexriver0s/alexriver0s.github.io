@@ -19,7 +19,7 @@ const IDIOMAS = {
   /* ================= ESPAÑOL (original) ================= */
   es: {
     'doc.title': 'Alex Riveros | Soporte Técnico IT en Asunción',
-    'doc.desc': 'Servicio técnico IT en Asunción y Gran Asunción: diagnóstico, redes y WiFi, Microsoft 365, cámaras de seguridad y soporte remoto. Para empresas, comercios y particulares.',
+    'doc.desc': 'Servicio técnico IT en Asunción: diagnóstico, redes y WiFi, Microsoft 365, cámaras de seguridad y soporte remoto. Para empresas, comercios y particulares.',
     'nav.servicios': 'Servicios', 'nav.proceso': 'Cómo trabajo', 'nav.sobre': 'Sobre mí', 'nav.agendar': 'Agendar',
     'aria.menu': 'Abrir menú', 'aria.idioma': 'Seleccionar idioma', 'aria.whatsapp': 'Escribir por WhatsApp',
     'hero.kicker': 'Asunción y Gran Asunción',
