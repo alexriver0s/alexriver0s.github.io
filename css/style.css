@@ -586,11 +586,11 @@ a { color: inherit; }
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1.15);
+    transform: translate(-50%, -50%) scale(1.25);
     width: 100%;
     z-index: 0;
-    opacity: 0.14;          /* apenas insinuado */
-    filter: blur(1.5px);    /* difuminado, para que no compita con el texto */
+    opacity: 0.3;           /* visible, sin competir con el texto */
+    filter: blur(0.6px);    /* apenas difuminado */
     pointer-events: none;   /* no intercepta toques del usuario */
   }
   .hero-visual svg { max-width: 460px; }
