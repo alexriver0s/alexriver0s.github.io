@@ -204,6 +204,47 @@ a { color: inherit; }
   padding: 88px 0 96px;
 }
 
+/* El hero pasa a dos columnas: texto a la izquierda, diagrama a la derecha */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* ---- Diagrama de red en SVG ---- */
+.hero-visual { display: flex; justify-content: center; }
+.hero-visual svg { width: 100%; max-width: 400px; height: auto; }
+
+.nodo-caja {
+  fill: rgba(255, 255, 255, 0.05);
+  stroke: rgba(125, 211, 252, 0.28);
+  stroke-width: 1.5;
+}
+.nodo-clave {                      /* el firewall se destaca: es el corazón */
+  fill: rgba(14, 165, 233, 0.12);
+  stroke: rgba(56, 189, 248, 0.65);
+}
+.nodo-icono   { stroke: #7dd3fc; color: #7dd3fc; }
+.nodo-icono-l { stroke: #93c5fd; }
+.nodo-texto {
+  fill: #cbd8e4;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  dominant-baseline: middle;
+}
+
+/* Las líneas simulan tráfico circulando por la red.
+   stroke-dasharray crea guiones; animar stroke-dashoffset los desplaza. */
+.red-lineas {
+  stroke: rgba(56, 189, 248, 0.5);
+  stroke-dasharray: 5 9;
+  animation: circular 1.6s linear infinite;
+}
+@keyframes circular { to { stroke-dashoffset: -14; } }
+
 .hero-kicker {
   display: inline-block;
   font-size: 0.78rem;
@@ -531,6 +572,11 @@ a { color: inherit; }
 /* ============================================================
    RESPONSIVE — celulares y tablets
    ============================================================ */
+@media (max-width: 940px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+}
+
 @media (max-width: 860px) {
   .sobre-grid { grid-template-columns: 1fr; gap: 36px; }
   .tarjeta-ancha { grid-template-columns: 1fr; gap: 28px; padding: 28px; }

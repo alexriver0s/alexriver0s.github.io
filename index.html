@@ -47,6 +47,7 @@
     <!-- ============ HERO ============ -->
     <section class="hero">
       <div class="contenedor hero-inner">
+        <div class="hero-texto">
         <p class="hero-kicker" data-i18n="hero.kicker">Asunción y Gran Asunción</p>
         <h1 data-i18n="hero.titulo">Soporte Técnico IT para empresas</h1>
         <p class="hero-sub" data-i18n="hero.sub">
@@ -57,6 +58,86 @@
         <div class="hero-acciones">
           <a href="#agenda" class="btn btn-primario" data-i18n="hero.cta1">Agendar una visita</a>
           <a href="#servicios" class="btn btn-secundario" data-i18n="hero.cta2">Ver servicios y precios</a>
+        </div>
+        </div>
+
+        <!-- Topología de red dibujada en SVG: internet, firewall, switch
+             y los dispositivos conectados. Todo son coordenadas, no una
+             imagen: pesa 3 KB y se ve nítido en cualquier pantalla. -->
+        <div class="hero-visual">
+          <svg viewBox="0 0 360 344" role="img"
+               aria-label="Diagrama de una red empresarial: internet protegido por un firewall, un switch de distribución y los dispositivos conectados."
+               xmlns="http://www.w3.org/2000/svg">
+
+            <!-- ===== CONEXIONES (van primero: quedan detrás de las cajas) ===== -->
+            <g class="red-lineas" fill="none" stroke-width="2" stroke-linecap="round">
+              <path d="M180 60 V86" />
+              <path d="M180 132 V158" />
+              <path d="M180 204 V232" />
+              <path d="M58 232 H302" />
+              <path d="M58 232 V262" />
+              <path d="M180 232 V262" />
+              <path d="M302 232 V262" />
+            </g>
+
+            <!-- ===== INTERNET ===== -->
+            <g>
+              <rect class="nodo-caja" x="106" y="14" width="148" height="46" rx="12"/>
+              <g class="nodo-icono-l" fill="none" stroke-width="1.7">
+                <circle cx="134" cy="37" r="11"/>
+                <path d="M123 37h22M134 26c5 6 5 16 0 22-5-6-5-16 0-22z"/>
+              </g>
+              <text class="nodo-texto" x="158" y="42">Internet</text>
+            </g>
+
+            <!-- ===== FIREWALL (el nodo destacado) ===== -->
+            <g>
+              <rect class="nodo-caja nodo-clave" x="106" y="86" width="148" height="46" rx="12"/>
+              <g class="nodo-icono" fill="none" stroke-width="2" stroke-linejoin="round">
+                <path d="M134 97l11 4v9c0 7-5 13-11 15-6-2-11-8-11-15v-9l11-4z"/>
+                <path d="M129 109l4 4 7-8" stroke-linecap="round"/>
+              </g>
+              <text class="nodo-texto" x="158" y="114">Firewall</text>
+            </g>
+
+            <!-- ===== SWITCH ===== -->
+            <g>
+              <rect class="nodo-caja" x="106" y="158" width="148" height="46" rx="12"/>
+              <g class="nodo-icono" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M124 176h20M140 172l4 4-4 4"/>
+                <path d="M144 188h-20M128 184l-4 4 4 4"/>
+              </g>
+              <text class="nodo-texto" x="158" y="186">Switch</text>
+            </g>
+
+            <!-- ===== DISPOSITIVOS ===== -->
+            <!-- Estación de trabajo -->
+            <g>
+              <rect class="nodo-caja" x="20" y="262" width="76" height="62" rx="12"/>
+              <g class="nodo-icono" fill="none" stroke-width="2" stroke-linejoin="round">
+                <rect x="43" y="278" width="30" height="21" rx="3"/>
+                <path d="M52 309h12M58 299v10" stroke-linecap="round"/>
+              </g>
+            </g>
+            <!-- Cámara de seguridad tipo bullet -->
+            <g>
+              <rect class="nodo-caja" x="142" y="262" width="76" height="62" rx="12"/>
+              <g class="nodo-icono" fill="none" stroke-width="2" stroke-linejoin="round">
+                <path d="M168 277h16M176 277v6" stroke-linecap="round"/>
+                <rect x="164" y="283" width="30" height="16" rx="5"/>
+                <circle cx="187" cy="291" r="3.6"/>
+              </g>
+            </g>
+            <!-- Punto de acceso WiFi -->
+            <g>
+              <rect class="nodo-caja" x="264" y="262" width="76" height="62" rx="12"/>
+              <g class="nodo-icono" fill="none" stroke-width="2" stroke-linecap="round">
+                <path d="M292 297a13 13 0 0 1 20 0"/>
+                <path d="M286 289a22 22 0 0 1 32 0"/>
+                <circle cx="302" cy="305" r="2.6" fill="currentColor" stroke="none"/>
+              </g>
+            </g>
+          </svg>
         </div>
       </div>
     </section>
